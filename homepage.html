@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yahoo Stock Finance Ticker - AJAX</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script type="text/javascript" src="scripts.js"></script>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Search for your favorite stock</h1>
+				<form class="yahoo-finance-form form-inline">
+					<div class="input-group">
+						<input type="text" class="form-control" id="ticker" placeholder="Please enter a stock ticker/symbol" />
+						<button type="submit" class="btn btn-primary">Go get those stocks!</button>
+					</div>
+				</form>
+			</div><!-- col-sm-12 -->
+			<div class="col-sm-12">
+				<table id="stock-table" class="table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>Stock Symbol</th>
+							<th>Company Name</th>
+							<th>Ask Price</th>
+							<th>Bid Price</th>
+							<th>Daily Change</th>
+						</tr>
+					</thead>
+					<tbody id="stock-table-body">
+						<tr>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!-- col-sm-12 -->
+
+			<div class="col-sm-12">
+				<h3>My watched stocks</h3>
+				<table id="stock-table-saved" class="table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>Stock Symbol</th>
+							<th>Company Name</th>
+							<th>Ask Price</th>
+							<th>Bid Price</th>
+							<th>Daily Change</th>
+						</tr>
+					</thead>
+					<tbody id="stock-table-saved-body">
+						<!-- <tr>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr> -->
+					</tbody>
+				</table>
+			</div><!-- col-sm-12 -->
+		</div><!-- row -->
+	</div><!-- container -->
+</body>
+</html>
