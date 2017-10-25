@@ -26,7 +26,12 @@ var server = http.createServer((req, res)=>{
 		var jsContents = renderScripts();
 		res.writeHead(200, {'content-type': 'text/javascript'});
 		res.end(jsContents);
-	}else{
+	}else if(req.url === '/logo.png'){
+		var img = fs.readFileSync('logo.png');
+		res.writeHead(200, {'content-type': 'image/png'});
+		res.end(img);
+	}
+	else{
 		res.writeHead(404,{'content-type':'text/html'});
 		res.end('<h1>Sorry, this page does not exist</h1>');
 	}
